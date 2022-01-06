@@ -25,6 +25,12 @@ public class MenuPage : Page
 
     public void BtnBack()
     {
+        StartCoroutine(IBack());
+    }
+
+    IEnumerator IBack()
+    {
+        yield return new WaitForSeconds(0.2f);
         GM.SwitchPage(this, GameManager.PageNames.StartPage);
     }
 }
