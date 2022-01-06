@@ -1,0 +1,3 @@
+include ':BluetoothPlugin'
+include ':app'
+rootProject.name = "UnityPlugin"
