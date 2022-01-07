@@ -53,11 +53,17 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Pages\Page.cs" />
-    <Compile Include="Assets\Pages\StartPage.cs" />
-    <Compile Include="Assets\Pages\MenuPage.cs" />
+    <Compile Include="Assets\Scripts\Page.cs" />
+    <Compile Include="Assets\Scripts\StartPage.cs" />
+    <Compile Include="Assets\Scripts\MenuPage.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Simple UI\Samples\IconPreview.cs" />
+    <Compile Include="Assets\Scripts\Bluetooth\BluetoothWrapper.cs" />
+    <Compile Include="Assets\Scripts\Bluetooth\BluetoothWrapperAndroid.cs" />
+    <Compile Include="Assets\Scripts\Bluetooth\BluetoothWrapperIOS.cs" />
+    <Compile Include="Assets\Resources\RuleBooks\BaseGame\BaseGameRuleBook.cs" />
+    <Compile Include="Assets\Scripts\GameRulesPage.cs" />
+    <Compile Include="Assets\Resources\RuleBooks\Book.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Simple UI\Fonts\OFL.txt" />
