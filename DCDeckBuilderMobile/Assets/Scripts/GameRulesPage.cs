@@ -28,7 +28,7 @@ public class GameRulesPage : Page
         RuleBook = new BaseGameRuleBook();
         BookIndex = 0;
         BookPageImage.sprite = RuleBook.bookPages[BookIndex];
-        BookindexCounter.GetComponent<Text>().text = BookIndex.ToString() + "/" + RuleBook.numOfPages.ToString();
+        BookindexCounter.GetComponent<Text>().text = (BookIndex + 1).ToString() + "/" + RuleBook.numOfPages.ToString();
         BookPanel.SetActive(true);
     }
 
@@ -42,7 +42,7 @@ public class GameRulesPage : Page
                 BtnNext.SetActive(false);
             }            
             BookPageImage.sprite = RuleBook.bookPages[BookIndex];
-            BookindexCounter.GetComponent<Text>().text = BookIndex.ToString() + "/" + RuleBook.numOfPages.ToString();
+            BookindexCounter.GetComponent<Text>().text = (BookIndex + 1).ToString() + "/" + RuleBook.numOfPages.ToString();
             BtnPrevious.SetActive(true);
         }
     }
@@ -57,7 +57,7 @@ public class GameRulesPage : Page
                 BtnPrevious.SetActive(false);
             }            
             BookPageImage.sprite = RuleBook.bookPages[BookIndex];
-            BookindexCounter.GetComponent<Text>().text = BookIndex.ToString() + "/" + RuleBook.numOfPages.ToString();
+            BookindexCounter.GetComponent<Text>().text = (BookIndex + 1).ToString() + "/" + RuleBook.numOfPages.ToString();
             BtnNext.SetActive(true);
         }
     }

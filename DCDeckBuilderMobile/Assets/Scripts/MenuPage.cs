@@ -23,6 +23,17 @@ public class MenuPage : Page
         GM.SwitchPage(this, GameManager.PageNames.GameRulesPage);
     }
 
+    public void OnClickOpenCreateParty()
+    {
+        StartCoroutine(IOpenCreateParty());
+    }
+
+    IEnumerator IOpenCreateParty()
+    {
+        yield return new WaitForSeconds(0.2f);
+        GM.SwitchPage(this, GameManager.PageNames.CreatePartyPage);
+    }
+
     public override void Update()
     {
         if (Application.platform == RuntimePlatform.Android)

@@ -9,4 +9,8 @@ public class Page : MonoBehaviour
 
     // Update is called once per frame
     public virtual void Update() { }
+
+    public virtual void OnEnable() { }
+
+    public virtual void ButtonCallBack(string msg) { }
 }

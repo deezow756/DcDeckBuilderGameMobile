@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public enum PageNames { StartPage, MenuPage, GameRulesPage}
+    public enum PageNames { StartPage, MenuPage, CreatePartyPage, GameRulesPage}
     public Dictionary<PageNames, Page> Pages = new Dictionary<PageNames, Page>();
     [SerializeField]
     private Page StartPage;
     [SerializeField]
     private Page MenuPage;
+    [SerializeField]
+    private Page CreatePartyPage;
     [SerializeField]
     private Page GameRulesPage;
 
@@ -21,6 +23,7 @@ public class GameManager : MonoBehaviour
     {
         Pages.Add(PageNames.StartPage, StartPage);
         Pages.Add(PageNames.MenuPage, MenuPage);
+        Pages.Add(PageNames.CreatePartyPage, CreatePartyPage);
         Pages.Add(PageNames.GameRulesPage, GameRulesPage);
         BluetoothPlugin = BluetoothWrapper.pluginWithGameObjectName(this.transform.name);
     }

@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CreatePartyPage
     - GameManager
     - GameRulesPage
     - MenuPage
@@ -27,9 +28,13 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Outline
+    - UnityEngine.UI.RectMask2D
+    - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
+    - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -65,27 +70,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1492}
     - Class: 114
+      Script: {instanceID: 1598}
+    - Class: 114
       Script: {instanceID: 1668}
     - Class: 114
-      Script: {instanceID: 2294}
+      Script: {instanceID: 1790}
     - Class: 114
-      Script: {instanceID: 2406}
+      Script: {instanceID: 2298}
     - Class: 114
-      Script: {instanceID: 2572}
+      Script: {instanceID: 2410}
     - Class: 114
-      Script: {instanceID: 2612}
+      Script: {instanceID: 2578}
     - Class: 114
-      Script: {instanceID: 2756}
+      Script: {instanceID: 2620}
     - Class: 114
-      Script: {instanceID: 2992}
+      Script: {instanceID: 2764}
     - Class: 114
-      Script: {instanceID: 3040}
+      Script: {instanceID: 3000}
     - Class: 114
-      Script: {instanceID: 3838}
+      Script: {instanceID: 3048}
     - Class: 114
-      Script: {instanceID: 4076}
+      Script: {instanceID: 3104}
     - Class: 114
-      Script: {instanceID: 27290}
+      Script: {instanceID: 3694}
+    - Class: 114
+      Script: {instanceID: 3772}
+    - Class: 114
+      Script: {instanceID: 3846}
+    - Class: 114
+      Script: {instanceID: 4086}
+    - Class: 114
+      Script: {instanceID: 41040}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -189,10 +204,22 @@ ScriptsOnlyBuild:
     className: Page
   - hash:
       serializedVersion: 2
+      Hash: 3f661d134e461bac7cbb6568c720d052
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameRulesPage
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: bf6722e6ae4ba919a3b14043595686b0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BaseGameRuleBook
   - hash:
       serializedVersion: 2
       Hash: 800c50acba124432abb4cf0d47202e06
@@ -256,6 +283,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BluetoothWrapperAndroid
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
     className: TestRunCallbackListener
@@ -271,6 +304,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: bf6722e6ae4ba919a3b14043595686b0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Book
   - hash:
       serializedVersion: 2
       Hash: 233dce24a4e619fdd95b9b793d68e7f7
@@ -507,13 +546,19 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BluetoothWrapperIOS
+  - hash:
+      serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: 7cc2ebe3017830ba2531466778d7ad6e
+      Hash: 935186d15dfc2405cd5a098535bdaaec
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -523,6 +568,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BluetoothWrapper
   - hash:
       serializedVersion: 2
       Hash: 946ba6d4a5bcec9d6a0f4f14b020563d
@@ -555,40 +606,10 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 55078b1d98e62a237eac6d8e64f550fa
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: BluetoothWrapper
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BluetoothWrapperAndroid
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BluetoothWrapperIOS
-  - hash:
-      serializedVersion: 2
-      Hash: bf6722e6ae4ba919a3b14043595686b0
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BaseGameRuleBook
-  - hash:
-      serializedVersion: 2
-      Hash: 3f661d134e461bac7cbb6568c720d052
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameRulesPage
-  - hash:
-      serializedVersion: 2
-      Hash: bf6722e6ae4ba919a3b14043595686b0
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Book
+    className: CreatePartyPage
   platform: 13
   scenePathNames:
   - Assets/Scenes/Game.unity

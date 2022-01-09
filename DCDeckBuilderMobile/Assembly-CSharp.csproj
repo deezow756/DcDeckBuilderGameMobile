@@ -54,16 +54,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Page.cs" />
+    <Compile Include="Assets\Scripts\GameRulesPage.cs" />
+    <Compile Include="Assets\Resources\RuleBooks\BaseGame\BaseGameRuleBook.cs" />
+    <Compile Include="Assets\Scripts\CreatePartyPage.cs" />
+    <Compile Include="Assets\Scripts\Bluetooth\BluetoothWrapperAndroid.cs" />
+    <Compile Include="Assets\Resources\RuleBooks\Book.cs" />
     <Compile Include="Assets\Scripts\StartPage.cs" />
     <Compile Include="Assets\Scripts\MenuPage.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Simple UI\Samples\IconPreview.cs" />
-    <Compile Include="Assets\Scripts\Bluetooth\BluetoothWrapper.cs" />
-    <Compile Include="Assets\Scripts\Bluetooth\BluetoothWrapperAndroid.cs" />
     <Compile Include="Assets\Scripts\Bluetooth\BluetoothWrapperIOS.cs" />
-    <Compile Include="Assets\Resources\RuleBooks\BaseGame\BaseGameRuleBook.cs" />
-    <Compile Include="Assets\Scripts\GameRulesPage.cs" />
-    <Compile Include="Assets\Resources\RuleBooks\Book.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Bluetooth\BluetoothWrapper.cs" />
+    <Compile Include="Assets\Simple UI\Samples\IconPreview.cs" />
+    <Compile Include="Assets\Scripts\UI\ListButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Simple UI\Fonts\OFL.txt" />
